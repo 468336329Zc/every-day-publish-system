@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>最帅大数据小组-人脸登录</title>
+    <link rel="shortcut icon" href="{{ url_for('static',filename='images/favicon.ico') }}">
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/face-login.css') }}">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css"
+          integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+</head>
+
+<body  style="transition:all 1s ease-in-out;">
+
+<div class="view">
+    <ul class="nav nav-tabs">
+					<li class="nav-item">
+						<a class="nav-link active show" href="/" >主页</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#" >注册</a>
+					</li>
+					<li class="nav-item">
+							<a class="nav-link" href="/login" >用户名登录</a>
+					</li>
+				</ul>
+		<div class="welcome-page" >
+			<pre ><h1 style="color: #0084ff" id="aa"></h1></pre>
+            <h1 style="display:none;"  id="w" >最帅大数据小组每日报告系统~</h1>
+
+            <i>你吃饭了么？交个朋友吧？</i>
+            <br>
+            <br>
+            <p><a class="btn developmentor" href="http://zhangchuanjun.cn">关于开发者</a></p>
+            <br>
+            <p>当前版本:1.0</p>
+            <br>
+
+                <div id="main" class="face_login">
+                <button  class="btn btn-success btn-lg" id='info-yes' onclick='faceloginshow()'>人脸识别登录</button>
+                 <canvas hidden id="canvas" width="300px" height="240px"> </canvas>
+            </div>
+
+
+</div>
+
+</div>
+
+
+    <div class="mainD" >
+        <div id="shadow">
+            <div id="info">
+                <div id="info-title">登录申请权限提醒
+                    <span id="info-sl" aria-hidden="true">x</span>
+                </div>
+                <div id="info-content">
+                	<video id="v" style="width: 300px;height: 240px;"></video>
+                    <canvas hidden="" id="canvas" width="300px" height="240px"></canvas>
+                     <img id="imgTag" src=""  hidden='' alt="imgTag">
+                </div>
+                <div id="info-button">
+                    <button  id="info-yes" onclick="login()">确定</button>
+                    <button id="info-no">取消</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="{{ url_for('static',filename='js/face-login.js') }}"></script>
+<script src="{{ url_for('static',filename='js/jquery.min.js') }}"></script>
+<script src="{{ url_for('static',filename='js/show.js') }}"></script>
+
+</html>

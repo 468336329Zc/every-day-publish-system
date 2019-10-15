@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>大数据小组每日报告管理系统</title>
+    <link rel="shortcut icon"href="{{ url_for('static',filename='images/favicon.ico') }}">
+    <link rel="stylesheet"  href="{{ url_for('static',filename='css/admin-login.css') }}">
+     <script type="text/javascript">
+      var onloadCallback = function() {
+        grecaptcha.render('html_element', {
+          'sitekey' : '6LcK4bwUAAAAANw3pmXkvtLitLd3FWg2inqh-_t8'
+        });
+      };
+    </script>
+</head>
+<body>
+<canvas id="c_n7" width="1444" height="1444" style="position: fixed; top: 0; left: 0; z-index: -1; opacity: 1;"></canvas>
+<div class="sign-in-wrap">
+    <p class="title">大数据小组每日报告管理系统</p>
+    <form method="post" action="{{ url_for('login') }}" class="gh-signin" id="html_element">
+        <input tabindex="1" name="username" placeholder="姓名" autofocus="" type="text" class="gh-input">
+        <input tabindex="2" name="password" placeholder="密码" type="password" class="password gh-input ember-view">
+        <input tabindex="3" type="submit" class="login-button" value="登录">
+         <div class="g-recaptcha" data-sitekey="6LfhI2EUAAAAAESR_XqCX6Vk0yXUGNYQAA-zz2su"></div>
+
+</form>
+    <div class="footer"><p><a href="http://zhangchuanjun.cn">author</a></p></div>
+</div>
+</body>
+
+<script src='https://www.google.com/recaptcha/api.js'></script>
+<script src="{{ url_for('static',filename='js/show.js') }}"></script>
+
+<script src="{{ url_for('static',filename='js/login-background.js') }}"></script>
+
+</html>

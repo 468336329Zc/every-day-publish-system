@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>修改当日报告</title>
+
+    <link rel="shortcut icon" href="{{ url_for('static',filename='images/favicon.ico') }}">
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/admin-login.css') }}">
+</head>
+<body>
+
+
+<div class="form-group" >
+    <form action="{{ url_for('republish') }}"  method="POST">
+        <textarea type="text" class="form-control" name='re_content' placeholder="内容">{{ newest_content.content }}</textarea>
+        <br>
+        <button class="btn" type="submit">提交</button>
+    </form>
+</div>
+
+</body>
+</html>

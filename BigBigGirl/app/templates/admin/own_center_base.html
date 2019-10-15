@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>个人中心 -{% block title %}{% endblock %}</title>
+   <link rel="shortcut icon"href="{{ url_for('static',filename='images/favicon.ico') }}">
+<link rel="stylesheet" href="{{ url_for('static',filename='css/admin-login.css') }}">
+<link rel="stylesheet" href="{{ url_for('static',filename='css/own_center.css') }}">
+    {% block head %}{% endblock %}
+</head>
+<body>
+<div class="col-2 col-md-2 sidebar-offcanvas" id="sidebar">
+    <div class="list-group has-bdb">
+        <a href="{{ url_for('publish') }}" class="list-group-item" target="_blank">发表今日报告</a>
+    </div>
+    <div class="list-group-item list-group-title">内容
+        <div class="list-group">
+            <a href="{{ url_for('republish') }}" class="list-group-item active" target="_blank">今日报告修改</a>
+
+            <a href="{{ url_for('alter_pwd') }}" class="list-group-item active" target="_blank">密码修改</a>
+
+        </div>
+
+    </div>
+</div>
+{% block main %}{% endblock %}
+<script>
+
+
+</script>
+
+</body>
+</html>

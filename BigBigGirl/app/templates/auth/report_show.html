@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>大数据小组每日报告(最新)</title>
+    <link rel="shortcut icon" href="{{ url_for('static',filename='images/favicon.ico') }}">
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/admin-login.css') }}">
+
+</head>
+<body style="transition:all 1s ease-in-out;">
+
+
+<div class="report_show">
+    <pre ><h1 id="aa"></h1></pre>
+    <div style="display:none" id="w">最帅大数据小组今日份报告~</div>
+    <h3>{{ latest_time.create_time }}</h3>
+    {% for report in reports %}
+        <span><b style="color:#FFFFFF ;font-size:25px;" >{{ report.name }}:</b></span>
+        <div class="own_font">
+            {{ report.content }}
+        </div>
+    {% endfor %}
+`
+</div>
+</body>
+
+
+<script src="{{ url_for('static',filename='js/show.js') }}"></script>
+<script src="{{ url_for('static',filename='js/jquery.min.js') }}"></script>
+
+</html>

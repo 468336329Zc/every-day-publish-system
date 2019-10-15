@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>发布每日报告</title>
+
+    <link rel="shortcut icon" href="{{ url_for('static',filename='images/favicon.ico') }}">
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/admin-login.css') }}">
+</head>
+<body>
+
+
+<div class="form-group" >
+    <form action="{{ url_for('publish') }}"  method="POST">
+        <textarea type="text" class="form-control" name='content' placeholder="内容"></textarea>
+        <br>
+        <button class="btn" type="submit">提交</button>
+    </form>
+</div>
+
+</body>
+</html>

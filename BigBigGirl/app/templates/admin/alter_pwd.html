@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>密码修改</title>
+
+    <link rel="shortcut icon" href="{{ url_for('static',filename='images/favicon.ico') }}">
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/admin-login.css') }}">
+</head>
+<body>
+
+     <form action="{{ url_for('alter_pwd') }}"  method="POST">
+         <input placeholder="新的密码" name="new_pwd">
+     <button type="submit">提交</button>
+     </form>
+</body>
+
+</html>
+
+
