@@ -1,5 +1,9 @@
 每日报告发布系统
-
+人脸识别登录使用face_recognition
+windows+ubuntu下环境配置看：
+https://zhangchuanjun.cn/articles/detail/ubunutu+Windows%E4%B8%8B%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE%E4%BD%BF%E7%94%A8%E5%BC%80%E6%BA%90%E4%BA%BA%E8%84%B8%E8%AF%86%E5%88%AB%E5%BA%93face_recognition/
+或者：
+https://blog.csdn.net/qq_38228830/article/details/80231702
 
 
 登录界面（也作为主界面）
